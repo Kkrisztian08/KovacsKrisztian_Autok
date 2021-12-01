@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Autok">
         <activity
+            android:name=".InsertActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SearchResultActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

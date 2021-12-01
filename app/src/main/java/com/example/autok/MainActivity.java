@@ -3,6 +3,7 @@ package com.example.autok;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,11 +23,20 @@ public class MainActivity extends AppCompatActivity {
         init();
 
         Keres.setOnClickListener(view -> {
-            StringBuilder sb=new StringBuilder();
             String gyarto = Gyarto.getText().toString().trim();
+            Cursor adat=db.modellKeres(gyarto);
+            StringBuilder sb=new StringBuilder();
             if (gyarto.isEmpty()){
                 Toast.makeText(getApplicationContext(), "A gyártó mező kitöltése kötelező!", Toast.LENGTH_SHORT).show();
             }else {
+                if (!(adat.getCount()==0)) {
+                    while (adat.moveToNext()){
+                        sb.append("Modell: ").append(adat.getString(0));
+                        sb.append(System.lineSeparator());
+                    }
+                }else {
+                    sb.append("Nem található rekord a következő adattal: ").append(gyarto);
+                }
                 Intent felvetel = new Intent(MainActivity.this, SearchResultActivity.class);
                 String modell = sb.toString();
                 felvetel.putExtra("modellKulcs", modell);

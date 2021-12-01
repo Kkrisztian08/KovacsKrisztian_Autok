@@ -1,13 +1,11 @@
 package com.example.autok;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class SearchResultActivity extends AppCompatActivity {
 
@@ -33,10 +31,7 @@ public class SearchResultActivity extends AppCompatActivity {
             startActivity(vissza);
             finish();
         });
-
     }
-
-
 
     private void init(){
         Talalatok=findViewById(R.id.tv_eredmeny);
@@ -44,5 +39,4 @@ public class SearchResultActivity extends AppCompatActivity {
         db = new DBHelper(this);
 
     }
-
 }

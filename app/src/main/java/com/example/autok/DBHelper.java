@@ -49,8 +49,8 @@ public class DBHelper extends SQLiteOpenHelper {
         return db.insert(TABLE_NAME, null, values) != -1;
     }
 
-    public Cursor gyartoKeres(String gyarto){
+    public Cursor modellKeres(String gyarto){
         SQLiteDatabase db = this.getReadableDatabase();
-        return db.rawQuery("SELECT modell FROM autok WHERE gyarto = ?", new String[]{gyarto});
+        return db.rawQuery("SELECT "+COL_MODELL+" FROM "+TABLE_NAME+" WHERE "+COL_GYARTO+" = ?", new String[]{gyarto});
     }
 }

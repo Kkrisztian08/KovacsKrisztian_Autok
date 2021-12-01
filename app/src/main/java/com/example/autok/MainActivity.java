@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,9 +22,18 @@ public class MainActivity extends AppCompatActivity {
         init();
 
         Keres.setOnClickListener(view -> {
-            Intent felvetel = new Intent(MainActivity.this, SearchResultActivity.class);
-            startActivity(felvetel);
-            finish();
+            StringBuilder sb=new StringBuilder();
+            String gyarto = Gyarto.getText().toString().trim();
+            if (gyarto.isEmpty()){
+                Toast.makeText(getApplicationContext(), "A gyártó mező kitöltése kötelező!", Toast.LENGTH_SHORT).show();
+            }else {
+                Intent felvetel = new Intent(MainActivity.this, SearchResultActivity.class);
+                String modell = sb.toString();
+                felvetel.putExtra("modellKulcs", modell);
+                startActivity(felvetel);
+                finish();
+            }
+
         });
 
         Felvetel.setOnClickListener(view -> {

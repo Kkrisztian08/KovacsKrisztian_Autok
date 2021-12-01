@@ -54,14 +54,13 @@ public class InsertActivity extends AppCompatActivity {
             }
         });
 
-        Vissza.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent vissza = new Intent(InsertActivity.this, MainActivity.class);
-                startActivity(vissza);
-                finish();
-            }
+        Vissza.setOnClickListener(view -> {
+            Intent vissza = new Intent(InsertActivity.this, MainActivity.class);
+            startActivity(vissza);
+            finish();
         });
+
+
 
     }
 

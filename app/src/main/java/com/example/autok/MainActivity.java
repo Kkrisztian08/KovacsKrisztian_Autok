@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 Intent felvetel = new Intent(MainActivity.this, SearchResultActivity.class);
                 String modell = sb.toString();
-                felvetel.putExtra("modellKulcs", modell);
+                felvetel.putExtra("modellFinder", modell);
                 startActivity(felvetel);
                 finish();
             }

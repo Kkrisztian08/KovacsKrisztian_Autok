@@ -22,7 +22,7 @@ public class SearchResultActivity extends AppCompatActivity {
 
         Bundle modellek=getIntent().getExtras();
         if (modellek!=null){
-            String modell=modellek.getString("modellKulcs");
+            String modell=modellek.getString("modellFinder");
             Talalatok.setText(modell);
         }
 

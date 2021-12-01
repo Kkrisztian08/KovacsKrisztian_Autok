@@ -49,7 +49,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return db.insert(TABLE_NAME, null, values) != -1;
     }
 
-    public Cursor autoKeres(String gyarto){
+    public Cursor gyartoKeres(String gyarto){
         SQLiteDatabase db = this.getReadableDatabase();
         return db.rawQuery("SELECT modell FROM autok WHERE gyarto = ?", new String[]{gyarto});
     }

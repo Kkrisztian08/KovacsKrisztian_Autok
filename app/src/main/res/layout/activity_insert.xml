@@ -15,17 +15,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Gyártó"
-            android:id="@+id/edit_gyarto"/>
+            android:id="@+id/edit_ujgyarto"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Modell"
+            android:id="@+id/edit_ujmodell"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Üzembe helyezés éve"
+            android:id="@+id/edit_ujuzembe"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Keresés"
-            android:id="@+id/btn_kereses"/>
+            android:text="Felvétel"
+            android:id="@+id/btn_ujfelvetel"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Új felvétele"
-            android:id="@+id/btn_felvetel"/>
+            android:text="Vissza"
+            android:id="@+id/btn_insertvissza"/>
 
     </LinearLayout>
 

@@ -11,21 +11,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Gyártó"
             android:id="@+id/edit_gyarto"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Keresés"
-            android:id="@+id/btn_kereses"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Új felvétele"
-            android:id="@+id/btn_felvetel"/>
+            android:text="Vissza"
+            android:id="@+id/btn_vissza"/>
+
 
     </LinearLayout>
 
